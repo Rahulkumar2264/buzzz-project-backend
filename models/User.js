@@ -20,6 +20,7 @@ const userSchema=new mongoose.Schema({
         min:5,
 
 
-    }
+    },
+    
 });
 module.exports = mongoose.model('User',userSchema);

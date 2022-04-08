@@ -5,7 +5,7 @@ const mongoose=require('./conn');
 const registerRoute=require('./Routers/Register');
 const authRoute=require('./Routers/auth');
 const userRoute=require('./models/User');
-const port= process.env.PORT || 5000;
+const port= process.env.PORT || 8080;
 
 app.use(express.json());
 app.use('/api/register',registerRoute);
