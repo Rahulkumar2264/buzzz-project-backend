@@ -1,14 +1,11 @@
 const mongoose=require('mongoose');
 
 const postSchema=new mongoose.Schema({
-    title:{
+    text:{
         type:String,
         required:true,
     },
-    description:{
-        type:String,
-        required:false,
-    },
+
     image_url:{
         type:String,
         required:false,
