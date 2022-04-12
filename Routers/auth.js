@@ -51,8 +51,15 @@ router.post("/login", async (req, res) => {
     );
 
     res.status(300).json({
+<<<<<<< HEAD
       message: "User Found",
       token: token
+=======
+      message:"User Found",
+      token:token,
+      user_id:user._id
+
+>>>>>>> 3d205129a4422fa4f391ed3505df78bc36c6ddc4
     });
     res.status(404).json({
       message: "Auth Failed",
