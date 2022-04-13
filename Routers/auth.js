@@ -41,12 +41,19 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1h" }
     );
 
-    res.status(300).json({
-      message: "User Found",
-      token: token,
-      user_id: user._id
+
+    res.status(200).json({
+      message:"User Found",
+      token:token,
+      user_id:user._id
 
     });
+    res.status(404).json({
+      message: "Auth Failed",
+    });
+
+    // res.status(300).json(user);
+
   } catch (err) {
     console.log(err);
   }
