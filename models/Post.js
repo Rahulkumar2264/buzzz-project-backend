@@ -2,15 +2,11 @@ const mongoose=require('mongoose');
 
 const postSchema=new mongoose.Schema({
     
-<<<<<<< HEAD
         userId: {
           type: String,
           required: true,
         },
     title:{
-=======
-    text:{
->>>>>>> 10d11440a788f839289c69008d2abeffc61d3134
         type:String,
         required:true,
     },
