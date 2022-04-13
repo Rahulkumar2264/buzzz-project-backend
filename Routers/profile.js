@@ -1,10 +1,25 @@
-const router=require('express').Router();
-router.get('/:id',(req,res)=>
-{
-    res.send('THis is profile root');
+const User = require("../models/User");
+const router = require("express").Router();
+router.get("/:id", async (req, res) => {
+  try {
+    const user = await User.findOne({ _id: req.params.id });
+    if (!user) {
+      return res.status(404).json("user not found");
+    }
 
-})
+    res.status(200).json({
+      message: "success",
+      data: {
+        user_id: user._id,
+        username: user.username,
+        email: user.email,
+        profile_image: user.profile_image,
+        profile_title: user.profile_title,
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
 
-
-
-module.exports=router;
+module.exports = router;
