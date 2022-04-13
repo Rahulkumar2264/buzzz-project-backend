@@ -9,6 +9,7 @@ const postRouter=require('./Routers/post');
 const userRoute=require('./models/User');
 const port= process.env.PORT || 5000;
 
+// dotenv.config();
 app.use(express.json());
 app.use(cors());
 app.use('/api/auth',authRoute);
