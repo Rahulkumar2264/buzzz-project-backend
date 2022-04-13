@@ -33,21 +33,23 @@ router.post("/login", async (req, res) => {
       return res.status(400).json("wrong password")
     }
     // generateJwt token   
-  var token = jwt.sign( {
-    username:user.username,
-    password:user.password
-  },
-      'secret', 
-      { expiresIn: "1h"}
-     );
+    var token = jwt.sign({
+      username: user.username,
+      password: user.password
+    },
+      'secret',
+      { expiresIn: "1h" }
+    );
+
 
     res.status(200).json({
       message:"User Found",
       token:token,
       user_id:user._id
+
     });
     res.status(404).json({
-      message:"Auth Failed",
+      message: "Auth Failed",
     });
 
     // res.status(300).json(user);
