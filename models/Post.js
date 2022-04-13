@@ -1,16 +1,8 @@
 const mongoose=require('mongoose');
 
 const postSchema=new mongoose.Schema({
-<<<<<<< HEAD
     
-        userId: {
-          type: String,
-          required: true,
-        },
-    title:{
-=======
     text:{
->>>>>>> 3d205129a4422fa4f391ed3505df78bc36c6ddc4
         type:String,
         required:true,
     },
